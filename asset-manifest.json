@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/nrcc-acis-tests/static/css/main.cfda8877.chunk.css",
+    "main.js": "/nrcc-acis-tests/static/js/main.16e1eed1.chunk.js",
+    "main.js.map": "/nrcc-acis-tests/static/js/main.16e1eed1.chunk.js.map",
+    "runtime~main.js": "/nrcc-acis-tests/static/js/runtime~main.aa08cd96.js",
+    "runtime~main.js.map": "/nrcc-acis-tests/static/js/runtime~main.aa08cd96.js.map",
+    "static/css/2.098bc035.chunk.css": "/nrcc-acis-tests/static/css/2.098bc035.chunk.css",
+    "static/js/2.65877e91.chunk.js": "/nrcc-acis-tests/static/js/2.65877e91.chunk.js",
+    "static/js/2.65877e91.chunk.js.map": "/nrcc-acis-tests/static/js/2.65877e91.chunk.js.map",
+    "index.html": "/nrcc-acis-tests/index.html",
+    "precache-manifest.b096d291ad83ad2ef5dcd15243adf0db.js": "/nrcc-acis-tests/precache-manifest.b096d291ad83ad2ef5dcd15243adf0db.js",
+    "service-worker.js": "/nrcc-acis-tests/service-worker.js",
+    "static/css/2.098bc035.chunk.css.map": "/nrcc-acis-tests/static/css/2.098bc035.chunk.css.map",
+    "static/css/main.cfda8877.chunk.css.map": "/nrcc-acis-tests/static/css/main.cfda8877.chunk.css.map"
+  }
+}
