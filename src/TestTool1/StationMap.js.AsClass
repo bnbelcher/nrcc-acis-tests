@@ -1,0 +1,60 @@
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+import React, { Component } from 'react';
+
+import 'leaflet/dist/leaflet.css';
+import { Map, CircleMarker, TileLayer, ZoomControl } from 'react-leaflet';
+
+const mapContainer = 'map-container';
+
+class StationMap extends Component {
+
+    constructor(props) {
+        super(props);
+        this.zoomLevel = 7;
+    }
+
+    componentDidMount() {
+      this.map = this.mapInstance.leafletElement
+    }
+
+    render() {
+
+        return (
+                    <Map
+                        ref={e => { this.mapInstance = e }}
+                        center={this.props.center}
+                        zoomControl={false}
+                        zoom={this.zoomLevel}
+                        attributionControl={false}
+                        className={mapContainer}
+                        style={{
+                            height: '300px',
+                            width: '300px',
+                        }}
+                    >
+                        <TileLayer
+                            attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        />
+                        {this.props.stations &&
+                          this.props.stations.map((s,i) => (
+                            <CircleMarker
+                              key={i+"marker"}
+                              center={[s.ll[1],s.ll[0]]}
+                              radius={3}
+                              color={(this.props.selected===s.name) ? "red" : "black"}
+                              onClick={() => {this.props.onclick(s)}}
+                            >
+                            </CircleMarker>
+                          ))
+                        }
+                        <ZoomControl position="topleft" />
+                    </Map>
+        );
+
+    }
+}
+
+export default StationMap;
